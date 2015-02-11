@@ -5,25 +5,44 @@
 
 public class Jedit
 {
-   public void editer( String args[] )
+   public void verifieroption(String args[])
    {
-      if(args.length > 0)
-		{
-         String option = "" ;
+      Boolean optionNumero = false; 
+       String option = "" ;
          String nomFichier = "";
+         String contenu = "";
          
          if(args.length == 1)
          {
             nomFichier = args[0];
+            for(int i = 1; i < args.length ; i ++)
+            {
+               contenu += args[i];
+            }
          }
          else
          {
+            optionNumero = true; 
             option = args[0];
             nomFichier = args[1];
+            for(int i = 2; i < args.length ; i ++)
+            {
+               contenu += args[i];
+            }
          }
-         
-         System.out.println(option);
-         System.out.println(nomFichier); 
+         ecriredansfichier(nomFichier, contenu ,optionNumero);
+   }
+   
+   public void ecriredansfichier(String nomFichier, String contenu, Boolean numerote)
+   {
+      System.out.println(contenu);
+   }
+   
+   public void editer(String args[])
+   {
+      if(args.length > 0)
+		{
+        verifieroption(args);
 		}
 		else
 		{
