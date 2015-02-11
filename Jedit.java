@@ -37,5 +37,5 @@ public class Jedit
       Jedit app = new Jedit();
       app.editer( args );
    }
-   
+   lel
 }
