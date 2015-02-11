@@ -7,7 +7,7 @@ public class Jedit
 {
    public void editer( String args[] )
    {
-      if(args.length > 0 && args.length <= 2)
+      if(args.length > 0)
 		{
          String option = "" ;
          String nomFichier = "";
