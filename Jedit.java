@@ -3,6 +3,7 @@
 // Fait par Melissa Boucher et Francis Thibodeau 
 // 13 Fevrier 2015
 import java.io.*;
+import javax.swing.JOptionPane;
 public class Jedit
 {
 	private static final int MIN_PARAM = 0;
@@ -17,12 +18,16 @@ public class Jedit
 		if (args.length == MIN_PARAM || args.length > MAX_PARAM)
 		{
 			paramValide = false;
-			System.out.println("Il doit y avoir minimum 1 parametre et maximum 2 parametres, fichier non cree.");
+			JOptionPane.showMessageDialog( null,
+										   "Il doit y avoir minimum 1 parametre et maximum 2.\nFichier non cree.",
+										   "Erreur", JOptionPane.WARNING_MESSAGE );
 		}
 		else if (!args[MIN_PARAM].equals("-n") && args.length == MAX_PARAM)
 		{
-			System.out.println("Vous avez entre une option invalide, fichier non cree.");
 			paramValide = false;	
+			JOptionPane.showMessageDialog( null,
+										   "Vous avez entre une option invalide.\nFichier non cree.",
+										   "Erreur", JOptionPane.WARNING_MESSAGE );
 		}
 		return paramValide;
 	}
@@ -91,8 +96,6 @@ public class Jedit
 			System.err.println(e);
 			System.exit(1);
 		}
-		
-		
 	}
 
 	public void editer(String args[])
