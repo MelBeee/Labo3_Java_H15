@@ -79,8 +79,8 @@ public class Jedit
 	}
 
 	// Cette fonction permet a l'utilisateur d'insérer ce qu'il a écrit en console dans une fichier text.
-	// Si les donnée founie par l'utilisateur sont valide et qu'il demande la numération des lignes(-n) les lignes sont numéroté.
-	// Cette fonction retire aussi les espaces en trop au début et a la fin du string.
+	// Si les données founies par l'utilisateur sont valides et qu'il demande la numération des lignes(-n) les lignes sont numérotées.
+	// Cette fonction retire aussi les espaces en trop au début et à la fin du string.
 	public void ecriredansfichier(String args[], String nomFichier)
 	{
 		boolean ecrireNumero = true; 
