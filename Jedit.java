@@ -106,11 +106,13 @@ public class Jedit
 			
 			while(!ligne.trim().isEmpty())
 			{
+				if(numLigne != 1)
+					writer.print("\n");
 				if(ecrireNumero) // si l'utilisateur veux des numero de ligne
 					writer.print(numLigne + "- "); // on écrit le numero
-					numLigne ++; 
-				writer.print(ligne + "\n"); // on écrit la ligne
+				writer.print(ligne); // on écrit la ligne
 				
+				numLigne ++; //incrementation
 				ligne = reader.readLine(); // on change de ligne
 			}
 			writer.close();
