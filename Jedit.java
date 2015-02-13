@@ -54,7 +54,7 @@ public class Jedit
 		char resultat;
 		
 		System.out.println("Un fichier portant le nom " + nomFichier + " existe deja.");
-		System.out.println("Voulez vous le remplacer ? O(oui) ou N(non)");
+		System.out.print("Voulez vous le remplacer ? O(oui) ou N(non)");
 		
 		try
 		{
@@ -109,7 +109,7 @@ public class Jedit
 				if(numLigne != 1)
 					writer.print("\n");
 				if(ecrireNumero) // si l'utilisateur veux des numero de ligne
-					writer.print(numLigne + "- "); // on écrit le numero
+					writer.print(numLigne + ": "); // on écrit le numero
 				writer.print(ligne); // on écrit la ligne
 				
 				numLigne ++; //incrementation
